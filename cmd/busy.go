@@ -11,11 +11,12 @@ var (
 		Use:   "busy",
 		Short: "Turns outlet on to indicate busy",
 		Long:  `Turns outlet on to indicate busy`,
-		Run: func(cmd *cobra.Command, args []string) {
+		RunE: func(cmd *cobra.Command, args []string) error {
 			err := outlet.TurnOn()
 			if err != nil {
-				fmt.Println(fmt.Errorf("Error turning outlet on: %s", err))
+				return fmt.Errorf("Error turning outlet on: %s", err)
 			}
+			return nil
 		},
 	}
 )

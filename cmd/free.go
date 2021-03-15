@@ -11,11 +11,12 @@ var (
 		Use:   "free",
 		Short: "Turns outlet off to indicate free",
 		Long:  `Turns outlet off to indicate free`,
-		Run: func(cmd *cobra.Command, args []string) {
+		RunE: func(cmd *cobra.Command, args []string) error {
 			err := outlet.TurnOff()
 			if err != nil {
-				fmt.Println(fmt.Errorf("Error turning outlet off: %s", err))
+				return fmt.Errorf("Error turning outlet on: %s", err)
 			}
+			return nil
 		},
 	}
 )
