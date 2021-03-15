@@ -12,9 +12,9 @@ var (
 		Short: "Turns outlet on to indicate busy",
 		Long:  `Turns outlet on to indicate busy`,
 		Run: func(cmd *cobra.Command, args []string) {
-			err := outlet.TurnOff()
+			err := outlet.TurnOn()
 			if err != nil {
-				fmt.Println(fmt.Errorf("Error turning outlet off: %s", err))
+				fmt.Println(fmt.Errorf("Error turning outlet on: %s", err))
 			}
 		},
 	}
