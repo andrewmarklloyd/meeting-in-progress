@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/andrewmarklloyd/meeting-in-progress/cmd"
+	"github.com/andrewmarklloyd/meeting-indicator/cmd"
 )
 
 func main() {

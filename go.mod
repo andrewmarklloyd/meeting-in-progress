@@ -1,4 +1,4 @@
-module github.com/andrewmarklloyd/meeting-in-progress
+module github.com/andrewmarklloyd/meeting-indicator
 
 go 1.15
 

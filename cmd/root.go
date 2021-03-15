@@ -12,7 +12,7 @@ var (
 	outlet  *hs100.Hs100
 	address string
 	rootCmd = &cobra.Command{
-		Use:   "meeting-in-progress",
+		Use:   "meeting-indicator",
 		Short: "Triggers light indicating meeting status",
 		Long: `Working from home means possible interruptions
 from people in your house. Use this tool to trigger a
